@@ -82,7 +82,7 @@ def tpt():
 
 
 				if senderbalance < intAmountSent:
-					print("you're a broke motherf*cker")
+					print("Balance: 0")
 
 			tptdf.append_data(directory, '/' + senderkeytag + '/Balance', newsenderbalance)
 			tptdf.append_data(directory, '/' + uuidOfRecipient + '/Balance', newrecipientbalance)
@@ -133,10 +133,10 @@ def loginCheck():
 	print(tptdf.fetch_data(firstdirect))
 	
 	if str(password.get()) == tptdf.fetch_data(firstdirect + '/Password') and str(username.get()) == tptdf.fetch_data(firstdirect + '/User'):
-		print("successs motherfucker")
+		print("successs")
 		tpt()
 	else:
-		print("you failed motherf*cker")
+		print("failure")
 
 Button(master, text='Quit', command=master.quit).grid(row=5, column=1, sticky=W, pady=4)
 
